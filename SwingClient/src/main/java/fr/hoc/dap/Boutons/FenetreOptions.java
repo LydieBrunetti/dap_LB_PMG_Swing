@@ -6,12 +6,10 @@ import javax.swing.JFrame;
 
 public class FenetreOptions extends JFrame {
 
-    /**
-     * 
-     */
-    private OptionsPanel options = new OptionsPanel();
-
+    /** serialVersionUID. */
     private static final long serialVersionUID = 1260275529481795988L;
+    
+    private OptionsPanel options = new OptionsPanel();
 
     public FenetreOptions() {
         this.setTitle("Sélectionner un UserKey");
@@ -25,5 +23,4 @@ public class FenetreOptions extends JFrame {
 
         this.setVisible(true);
     }
-
 }

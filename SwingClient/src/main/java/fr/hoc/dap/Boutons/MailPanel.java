@@ -9,9 +9,7 @@ import javax.swing.JPanel;
 
 public class MailPanel extends JPanel implements ActionListener {
 
-    /**
-     * 
-     */
+    /** serialVersionUID. */
     private static final long serialVersionUID = 2328643493016920959L;
 
     private JLabel label = new JLabel("Nombre d'emails non lus : ");
@@ -32,6 +30,7 @@ public class MailPanel extends JPanel implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent event) {
+      //TODO lbpmg by Djer |POO| Un peu comme pour le "EventPanel" le code ci-dessous peut etre mutualiser avec 80% du constructeur dans une méthdoe privée
         try {
             labelbis.setText(
                     Data.getData("http://localhost:8080/email/nbunread?userKey=" + DapData.getInstance().getUserKey()));
@@ -40,7 +39,5 @@ public class MailPanel extends JPanel implements ActionListener {
             labelbis.setText("error : impossible de récupérer les données");
             labelbis.setForeground(new Color(255, 0, 0));
         }
-
     }
-
 }

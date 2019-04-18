@@ -13,14 +13,14 @@ import javax.swing.JTextField;
 
 public class OptionsPanel extends JPanel implements ActionListener {
 
-    /**
-     * 
-     */
+    /** serialVersionUID. */
     private static final long serialVersionUID = -196996044686527386L;
 
+    //TODO lbpmg by Djer |POO| "userkeyField" serait mieu
     private JTextField entree2 = new JTextField("toto");
+    //TODO lbpmg by Djer |POO| "askUserKeyLbl" serait mieu
     private JLabel label2 = new JLabel("Saisissez votre UserKey :");
-    private JButton boutonok = new JButton("Sauvegarder");
+    private JButton boutonOk = new JButton("Sauvegarder");
 
     public OptionsPanel() {
         Font police = new Font("Arial", Font.BOLD, 14);
@@ -30,13 +30,14 @@ public class OptionsPanel extends JPanel implements ActionListener {
 
         this.add(label2);
         this.add(entree2);
-        this.add(boutonok);
+        this.add(boutonOk);
+        
+        //TODO lbpmg by Djer |Swing| "entree2" pourrias etre pré-rempli avec DapData.getInstance().getUserKey();
 
-        boutonok.addActionListener(this);
+        boutonOk.addActionListener(this);
     }
 
     public void actionPerformed(ActionEvent e) {
         DapData.getInstance().setUserKey(entree2.getText());
     }
-
 }
