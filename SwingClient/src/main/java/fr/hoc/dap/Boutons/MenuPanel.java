@@ -33,7 +33,6 @@ public class MenuPanel extends JPanel implements ActionListener {
         // refreshButon.addActionListener(this);
         optionbouton.addActionListener(this);
         comptebouton.addActionListener(this);
-
     }
 
     public void registerRefresh(ActionListener observateur) {
@@ -44,13 +43,11 @@ public class MenuPanel extends JPanel implements ActionListener {
         Object source = e.getSource();
 
         if (source == comptebouton) {
+          //TODO lbpmg by Djer |POO| Comme tu n'as pas besoin de l'instance de FenetreComtpe créée, tu n'est pas obligé de stocker cette instance dans une variable local
             FenetreCompte fen2 = new FenetreCompte();
         } else if (source == optionbouton) {
+            //TODO lbpmg by Djer |POO| Comme tu n'as pas besoin de l'instance de FenetreOptions créée, tu n'est pas obligé de stocker cette instance dans une variable local
             FenetreOptions fen3 = new FenetreOptions();
         }
-
-        // TODO Auto-generated method stub
-
     }
-
 }

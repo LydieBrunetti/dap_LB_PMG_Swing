@@ -17,9 +17,7 @@ import javax.swing.JTextField;
 
 public class ComptePanel extends JPanel implements ActionListener {
 
-    /**
-     * 
-     */
+    /** serialVersionUID. */
     private static final long serialVersionUID = 8525612752296251753L;
 
     private JTextField entree = new JTextField();
@@ -35,25 +33,25 @@ public class ComptePanel extends JPanel implements ActionListener {
         this.add(label);
         this.add(entree);
         this.add(boutonok);
-
+        
         boutonok.addActionListener(this);
-
     }
 
-    public void actionPerformed(ActionEvent boutonok) {
-
-        String nouveaunom = entree.getText();
+    public void actionPerformed(ActionEvent event) {
+        String nouveauNom = entree.getText();
 
         try {
-            Desktop.getDesktop().browse(new URI("http://localhost:8080/account/add/" + nouveaunom));
+            Desktop.getDesktop().browse(new URI("http://localhost:8080/account/add/" + nouveauNom));
         } catch (IOException e1) {
+          //TODO lbpmg by Djer |POO| Tu peux supprimer ce TO-DO car il semble être traité
             // TODO Auto-generated catch block
+          //TODO lbpmg by Djer |Log4J| "e1.printStackTrace()" affiche la trace directemnt dans la console est n'est "pas" visible. Une LOG (avec ajout des dépendance dans Maven pou Log4J) serait mieu
             e1.printStackTrace();
             label.setText(entree.getText());
         } catch (URISyntaxException e1) {
             // TODO Auto-generated catch block
+            //TODO lbpmg by Djer |Log4J| "e1.printStackTrace()" affiche la trace directemnt dans la console, une LOG serait mieu
             e1.printStackTrace();
         }
     }
-
 }

@@ -8,9 +8,7 @@ public class FenetreCompte extends JFrame {
 
     private ComptePanel compte = new ComptePanel();
 
-    /**
-     * 
-     */
+    /** serialVersionUID. */
     private static final long serialVersionUID = -6255837637028670939L;
 
     public FenetreCompte() {

@@ -34,6 +34,7 @@ public class Data {
             return stringBuilder.toString();
         } catch (Exception e) {
             e.printStackTrace();
+            //TODO lbpmg by Djer |Log4J| Une petite LOG en erreur ? 
             throw e;
         } finally {
 
@@ -41,11 +42,10 @@ public class Data {
                 try {
                     reader.close();
                 } catch (IOException ioe) {
+                  //TODO lbpmg by Djer |Log4J| Une petite LOG en erreur ? 
                     ioe.printStackTrace();
                 }
             }
         }
-
     }
-
 }

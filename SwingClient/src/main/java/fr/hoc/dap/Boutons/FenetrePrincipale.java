@@ -9,13 +9,17 @@ import javax.swing.JPanel;
 
 public class FenetrePrincipale extends JFrame {
 
+    /** serialVersionUID. */
     private static final long serialVersionUID = 82608271135446665L;
 
     private MailPanel email = new MailPanel();
     private EventPanel event = new EventPanel();
     private MenuPanel menu = new MenuPanel();
+    
+    //TODO lbpmg by Djer |POO| Pas top comme nom "EastPadding" serait mieux
     private JPanel pan4 = new JPanel();
 
+    //TODO lbpmg by Djer |Swing| Il faut eviter d'utiliser un Label pour faire "de la mise en page". SI **vraiment** nécésaire il vaut mieux créer un "Layout" spécifique (un "balancedBorderLayout" qui s'occupe d'aquillibrer l'afifchage SI une zone est vide) mais cela sera assez complexe 
     private JLabel label3 = new JLabel("                                       ");
 
     public FenetrePrincipale() {
@@ -44,5 +48,4 @@ public class FenetrePrincipale extends JFrame {
 
         this.setVisible(true);
     }
-
 }
